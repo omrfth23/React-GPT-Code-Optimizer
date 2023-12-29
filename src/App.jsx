@@ -3,16 +3,17 @@ import './App.css'
 import '@chatscope/chat-ui-kit-styles/dist/default/styles.min.css';
 import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from '@chatscope/chat-ui-kit-react';
 
-const API_KEY = "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";
-// "Explain things like you would to a 10 year old learning how to code."
-const systemMessage = { //  Explain things like you're talking to a software professional with 5 years of experience.
-  "role": "system", "content": "Explain things like you're talking to a software professional with 2 years of experience."
+const API_KEY = "YOUR_API_KEY";
+
+const systemMessage = { 
+  "role": "system", "content": "You are a programming language code optimizer program that doesn't take any other input and provides output by optimizing the given code input.And give explanation about optimized code.And give responses in Turkish Language.If prompt is not code answer this: Üzgünüm sadece kod optimize ediyorum lütfen kod girin."
 }
+
 
 function App() {
   const [messages, setMessages] = useState([
     {
-      message: "Hello, I'm ChatGPT! Ask me anything!",
+      message: "Merhaba, Ben Code Optimizer! Bana optimize edilmesi gereken kodu atabilirsin.",
       sentTime: "just now",
       sender: "ChatGPT"
     }
@@ -84,24 +85,25 @@ function App() {
   }
 
   return (
+    
     <div className="App">
-      <div style={{ position:"relative", height: "800px", width: "700px"  }}>
-        <MainContainer>
-          <ChatContainer>       
+      <h1 className="pageTitle">Code Optimizer</h1>
+      <div className='ChatBox' style={{ position:"relative", height: "660px", width: "800px" }}>
+        <MainContainer className='MainContainer'>
+          <ChatContainer className='ChatContainer'>       
             <MessageList 
               scrollBehavior="smooth" 
-              typingIndicator={isTyping ? <TypingIndicator content="ChatGPT is typing" /> : null}
-            >
+              typingIndicator={isTyping ? <TypingIndicator content="Kod optimize ediliyor" /> : null}>
               {messages.map((message, i) => {
                 console.log(message)
                 return <Message key={i} model={message} />
-              })}
+                })}
             </MessageList>
-            <MessageInput placeholder="Type message here" onSend={handleSend} />        
+            <MessageInput fancyScroll={false} attachButton={false} className='MessageInput' placeholder="Mesajını Buraya Yaz" onSend={handleSend} />        
           </ChatContainer>
         </MainContainer>
       </div>
-    </div>
+    </div>  
   )
 }
 

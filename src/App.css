@@ -35,8 +35,37 @@
 
 .card {
   padding: 2em;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
+
+
 
 .read-the-docs {
   color: #888;
+}
+
+.MessageInput {
+  text-align: left;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.ChatContainer {
+  text-align: left;
+  scroll-behavior: smooth;
+}
+.pageTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333; 
+}
+
+.MainContainer{
+  border-radius: 10px;
+  background-color: aquamarine;
 }
