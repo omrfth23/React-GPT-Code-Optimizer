@@ -103,6 +103,9 @@ function App() {
           </ChatContainer>
         </MainContainer>
       </div>
+      <div>
+        <footer>Merhabna</footer>
+      </div>
     </div>  
   )
 }
