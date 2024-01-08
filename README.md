@@ -43,4 +43,4 @@ npm run dev
 
 Explore the visual representation of our application's interface below.
 
-![Application Interface](url/to/screenshot.png)
+![Application Interface](https://github.com/omrfth23/React-GPT-Code-Optimizer/blob/main/public/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202023-12-24%20023835.png?raw=true)
